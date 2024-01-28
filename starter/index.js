@@ -65,3 +65,36 @@ function addEngineer() {
         },
     ])
 }
+
+// Add Intern Function
+function addIntern() {
+    inquirer.prompt([
+        {
+            type:"input",
+            name:"internName",
+            message:"Enter the Intern’s Name",
+        },
+        {
+            type:"input",
+            name:"internId",
+            message:"Enter the Intern’s ID",
+        },
+        {
+            type:"input",
+            name:"internEmail",
+            message:"Enter the Intern’s Email Address",
+        },
+        {
+            type:"input",
+            name:"internSchool",
+            message:"Enter the Intern’s School ",
+        },
+    ])
+}
+
+// When a user decides to finish building their team 
+//then they exit the application, and the HTML is generated.
+
+
+// The render function will generate and return 
+//a block of HTML including templated divs for each employee!
