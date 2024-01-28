@@ -40,6 +40,15 @@ function startApp() {
     ])
 }
 
+//When a user enters those requirements then the user is presented with a menu with the option to:
+//Add an engineer
+//Add an intern
+//Finish building the team
+
+
+
+
+
 // Add Engineer Function
 function addEngineer() {
     inquirer.prompt([
@@ -96,5 +105,19 @@ function addIntern() {
 //then they exit the application, and the HTML is generated.
 
 
+
+
+
+
 // The render function will generate and return 
 //a block of HTML including templated divs for each employee!
+
+
+
+
+
+//Write it to a file named team.html in the output folder.
+
+
+
+//You can use the provided variable outputPath to target this location.
