@@ -39,3 +39,29 @@ function startApp() {
         },
     ])
 }
+
+// Add Engineer Function
+function addEngineer() {
+    inquirer.prompt([
+        {
+            type:"input",
+            name:"engineerName",
+            message:"Enter the Engineer's Name",
+        },
+        {
+            type:"input",
+            name:"engineerId",
+            message:"Enter the Engineer's ID",
+        },
+        {
+            type:"input",
+            name:"engiEmailAddress",
+            message:"Enter the Engineer's Email Address",
+        },
+        {
+            type:"input",
+            name:"gitHubUsername",
+            message:"Enter the GitHub username",
+        },
+    ])
+}
