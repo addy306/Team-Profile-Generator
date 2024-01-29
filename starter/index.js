@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
+const { error } = require("console");
 
 let team = []
 
@@ -38,12 +39,42 @@ function startApp() {
             message:"Enter the Office Number",
         },
     ])
+    .then ((answers)=> {
+        const manager = new Manager(answers.managerName,answers.employeeId,answers.emailAddress,answers.officeNumber);
+        //push manager into team array
+        team.push(manager);
+        mainMenu()
+    }
+    )
 }
+startApp()
+
 
 //When a user enters those requirements then the user is presented with a menu with the option to:
 //Add an engineer
 //Add an intern
 //Finish building the team
+function mainMenu() {
+    inquirer.prompt([
+        {
+            type:"list",
+            name:"mainmenu",
+            message:"What would you like to do?",
+            choices:["Add an engineer","Add an intern","Finish building the team"]
+        },
+    ])
+.then((answers) =>{
+    //console.log(answers);
+    if (answers.mainmenu === "Add an engineer") {
+        addEngineer()
+    } else if (answers.mainmenu === "Add an intern"){
+        addIntern()
+    }
+    else{
+        finishTeam()
+    }
+})
+}
 
 
 
@@ -73,6 +104,13 @@ function addEngineer() {
             message:"Enter the GitHub username",
         },
     ])
+    .then ((answers)=> {
+        const engineer = new Engineer(answers.engineerName,answers.engineerId,answers.engiEmailAddress,answers.gitHubUsername);
+        //push manager into team array
+        team.push(engineer);
+        mainMenu()
+    }
+    )
 }
 
 // Add Intern Function
@@ -105,6 +143,17 @@ function addIntern() {
 //then they exit the application, and the HTML is generated.
 
 
+function finishTeam() {
+    console.log("finishTeam");
+    //adding html to fs
+
+console.log(render(team));
+fs.writeFile(outputPath,render(team),error =>{
+    if (error){
+    console.log(error);
+    }
+})
+}
 
 
 
