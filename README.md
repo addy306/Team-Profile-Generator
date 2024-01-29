@@ -15,11 +15,14 @@
 ## Deployed page URL
 [Team-Profile-Generator](https://addy306.github.io/Team-Profile-Generator/)
 
+## Project Repo URL
+[Project Repo](https://github.com/addy306/Team-Profile-Generator)
+
 
 ## Description
-In this project I create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
-This README contains everything a high-quality and professional should include.
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
+In this project I created a command-line application that dynamically generates a HTML webpage that displays summaries for each person. This application will take in information about employees on a software engineering team from a user's input using the Inquirer package.
+Will make sure every part of my code passes each provided test.
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -38,13 +41,12 @@ npm i
 The application will be invoked by using the following command:
 
 ```bash
-node index.mjs
+node index.js
 ```
 
 ## Webpage Features
 ### Screenshots, Videos, GIF
-* Video Demo Link
-https://photos.app.goo.gl/eWDZ1dw6iyzcUncB8
+
 
 
 
@@ -61,7 +63,9 @@ npm test
 
 ## Built With
 * Javascript
-* node.js, 
+* node.js
+* inquirer
+* jest 
 * npm
 
 
