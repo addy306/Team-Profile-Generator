@@ -41,7 +41,7 @@ function startApp() {
     ])
     .then ((answers)=> {
         const manager = new Manager(answers.managerName,answers.employeeId,answers.emailAddress,answers.officeNumber);
-        //push manager into team array
+        //push manager details into team array
         team.push(manager);
         mainMenu()
     }
@@ -64,7 +64,7 @@ function mainMenu() {
         },
     ])
 .then((answers) =>{
-    //console.log(answers);
+    //Check for user choice and run function accordingly
     if (answers.mainmenu === "Add an engineer") {
         addEngineer()
     } else if (answers.mainmenu === "Add an intern"){
@@ -106,7 +106,7 @@ function addEngineer() {
     ])
     .then ((answers)=> {
         const engineer = new Engineer(answers.engineerName,answers.engineerId,answers.engiEmailAddress,answers.gitHubUsername);
-        //push manager into team array
+        //push engineer details into team array
         team.push(engineer);
         mainMenu()
     }
@@ -137,6 +137,13 @@ function addIntern() {
             message:"Enter the Intern’s School ",
         },
     ])
+    .then ((answers)=> {
+        const intern = new Intern(answers.internName,answers.internId,answers.internEmail,answers.internSchool);
+        //push intern details into team array
+        team.push(intern);
+        mainMenu()
+    }
+    )
 }
 
 // When a user decides to finish building their team 
