@@ -13,8 +13,6 @@ const { error } = require("console");
 
 let team = []
 
-
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
 // Function for team manager prompt
 function startApp() {
     inquirer.prompt([
@@ -22,21 +20,29 @@ function startApp() {
             type:"input",
             name:"managerName",
             message:"Enter the Manager Name",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"employeeId",
             message:"Enter the Employee ID",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"emailAddress",
             message:"Enter the Email Address",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"officeNumber",
             message:"Enter the Office Number",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
     ])
     .then ((answers)=> {
@@ -50,10 +56,7 @@ function startApp() {
 startApp()
 
 
-//When a user enters those requirements then the user is presented with a menu with the option to:
-//Add an engineer
-//Add an intern
-//Finish building the team
+//Main menu function
 function mainMenu() {
     inquirer.prompt([
         {
@@ -87,21 +90,29 @@ function addEngineer() {
             type:"input",
             name:"engineerName",
             message:"Enter the Engineer's Name",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"engineerId",
             message:"Enter the Engineer's ID",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"engiEmailAddress",
             message:"Enter the Engineer's Email Address",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"gitHubUsername",
             message:"Enter the GitHub username",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
     ])
     .then ((answers)=> {
@@ -120,21 +131,29 @@ function addIntern() {
             type:"input",
             name:"internName",
             message:"Enter the Intern’s Name",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"internId",
             message:"Enter the Intern’s ID",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"internEmail",
             message:"Enter the Intern’s Email Address",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
         {
             type:"input",
             name:"internSchool",
             message:"Enter the Intern’s School ",
+             // Validate user entry to make sure user types an input
+        validate: (value)=> {if(value){return true} else {return "Please type some text to continue"}},
         },
     ])
     .then ((answers)=> {
@@ -148,13 +167,9 @@ function addIntern() {
 
 // When a user decides to finish building their team 
 //then they exit the application, and the HTML is generated.
-
-
 function finishTeam() {
-    console.log("finishTeam");
     //adding html to fs
-
-console.log(render(team));
+    //Write it to a file named team.html in the output folder.
 fs.writeFile(outputPath,render(team),error =>{
     if (error){
     console.log(error);
@@ -165,15 +180,7 @@ fs.writeFile(outputPath,render(team),error =>{
 
 
 
-// The render function will generate and return 
-//a block of HTML including templated divs for each employee!
 
 
 
 
-
-//Write it to a file named team.html in the output folder.
-
-
-
-//You can use the provided variable outputPath to target this location.
