@@ -15,8 +15,8 @@
 ## Deployed page URL
 [Team-Profile-Generator](https://addy306.github.io/Team-Profile-Generator/)
 
-## Project Repo URL
-[Project Repo](https://github.com/addy306/Team-Profile-Generator)
+## Project GitHub Repo URL
+[Project GitHub repository](https://github.com/addy306/Team-Profile-Generator)
 
 
 ## Description
