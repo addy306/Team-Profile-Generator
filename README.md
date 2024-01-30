@@ -47,6 +47,20 @@ node index.js
 ## Webpage Features
 ### Screenshots, Videos, GIF
 
+### Screenshot of commandline
+![Screenshot of Webpage](./images/prompt-view.JPG)
+
+### Screenshot of HMTL GENERATED FILE
+![Screenshot of Webpage](./images/generated-html.JPG)
+
+### Screenshot of commandline
+![Screenshot of Webpage](./images/html-browser-view.JPG)
+
+### Screenshot of npm test result
+![Screenshot of Webpage](./images/testing.JPG)
+
+### Screenshots of responsive view
+![Screenshot of Webpage](./images/tablet-view.JPG)
 
 
 
@@ -67,6 +81,7 @@ npm test
 * inquirer
 * jest 
 * npm
+* Bootstrap
 
 
 ## Questions

@@ -4,7 +4,7 @@ const generateTeam = team => {
     // creates the manager html
     const generateManager = manager => {
         return `
-        <div class="team-area py-3  col-sm-6 col-md-4 col-lg-3">
+        <div class="team-area py-3 h-100 col-sm-6 col-md-4 col-lg-3">
         <div class="card shadow employee-card">
         <div class="text-white card-header bg-primary">
             <h2 class="card-title">${manager.getName()}</h2>
@@ -25,7 +25,7 @@ const generateTeam = team => {
     // creates the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div class="team-area py-3 col-sm-6 col-md-4 col-lg-3">
+        <div class="team-area h-100 py-3 col-sm-6 col-md-4 col-lg-3">
         <div class="card shadow employee-card">
     <div class="text-white card-header bg-primary">
         <h2 class="card-title">${engineer.getName()}</h2>
@@ -46,7 +46,7 @@ const generateTeam = team => {
     // creates the html for interns
     const generateIntern = intern => {
         return `
-        <div class="team-area py-3 col-sm-6 col-md-4 col-lg-3">
+        <div class="team-area h-100 py-3 col-sm-6 col-md-4 col-lg-3">
         <div class="card shadow employee-card">
     <div class="text-white card-header bg-primary">
         <h2 class="card-title">${intern.getName()}</h2>
